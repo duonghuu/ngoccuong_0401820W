@@ -77,7 +77,7 @@
     <?php //phanquyen_menu('Banner trang trong','news','man','bntrong'); ?>
     <?php //phanquyen_menu('Text Đối tác','about','capnhat','txtdoitac'); ?>
     <?php phanquyen_menu('Đối tác','slider','man_photo','doi-tac'); ?>
-    <?php //phanquyen_menu('Banner quảng cáo','slider','man_photo','quang-cao'); ?>
+    <?php phanquyen_menu('Banner quảng cáo','slider','man_photo','quang-cao'); ?>
     <?php //phanquyen_menu('Banner quảng cáo dưới album','slider','man_photo','quang-cao2'); ?>
     <?php //phanquyen_menu('Quản lý quảng cáo 2 bên','slider','man_photo','letruot'); ?>
     <?php //phanquyen_menu('Cập nhật pupop quảng cáo','background','capnhat','pupop'); ?>
@@ -112,12 +112,13 @@
 </li>
 */?>
 <li class="categories_li setting_li <?php if(in_array($type, array('txtvideo','video',
-'hotline','tags','diachi')) || $_GET['com']=='company' || $_GET['com']=='meta' ||
+'hotline','zalo','tags','diachi')) || $_GET['com']=='company' || $_GET['com']=='meta' ||
 $_GET['com']=='user') echo ' activemenu' ?>" id="menu_cp"><a href="" title="" class="exp">
     <span>Nội dung khác</span><strong></strong></a>
     <ul class="sub">
         <?php phanquyen_menu('Cấu hình thông tin Website','company','capnhat',''); ?>
-        <?php phanquyen_menu('Quản lý zalo','news','man','hotline'); ?>
+        <?php phanquyen_menu('Quản lý hotline','news','man','hotline'); ?>
+        <?php phanquyen_menu('Quản lý zalo','news','man','zalo'); ?>
         <?php //phanquyen_menu('Quản lý chi nhánh','news','man','diachi'); ?>
         <?php phanquyen_menu('Quản lý video','video','man','video'); ?>
         <?php // phanquyen_menu('Tags','news','man','tags'); ?>

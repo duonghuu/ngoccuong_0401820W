@@ -280,6 +280,7 @@ switch($type){
 	}
 	break;
 	case 'hotline':
+	case 'zalo':
 	switch($act){
 		default:
 		$config['type'] = array('ten','link');
@@ -349,8 +350,8 @@ switch($type){
 	case 'logo':
 	switch($act){
 		default:
-		@define ( _width_thumb2 , 270 );
-		@define ( _height_thumb2 , 170 );
+		@define ( _width_thumb2 , 200 );
+		@define ( _height_thumb2 , 120 );
 		break;
 	}
 	break;
@@ -464,10 +465,10 @@ switch($type){
 	switch($act){
 		default:
 		@define ( _width_thumb , 600 );
-		@define ( _height_thumb , 210 );
+		@define ( _height_thumb , 260 );
 		@define ( _style_thumb , 2 );
 		@define ( _width_thumb2 , 600 );
-		@define ( _height_thumb2 , 210 );
+		@define ( _height_thumb2 , 260 );
 		break;
 	}
 	break;
@@ -499,7 +500,7 @@ switch($type){
 	case 'thong-tin-chinh-sach':
 	case 'chinh-sach-bo-si':
 	case 'so-sanh-cac-cho-si':
-	
+
 	switch($act){
 		default:
 		$config['type'] = array('noidung');

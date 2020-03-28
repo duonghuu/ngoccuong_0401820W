@@ -43,6 +43,8 @@ $ftlogo=get_fetch("select photo from #_about where type='footer' ");
  // and hienthi=1 order by stt asc");
 $hotline = get_result("select id,ten$lang as ten,chucvu,link from #_news where
  type='hotline' and hienthi=1 order by stt asc");
+$zalo = get_result("select id,ten$lang as ten,chucvu,link from #_news where
+ type='zalo' and hienthi=1 order by stt asc");
 // $diachi = get_result("select id,ten$lang as ten,mota$lang as mota from #_news 
 // where type='diachi' and hienthi=1 order by stt asc");
 // $yahoo = get_result("select * from #_yahoo where type='yahoo' and hienthi=1 order by stt asc");

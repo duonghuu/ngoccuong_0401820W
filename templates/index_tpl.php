@@ -61,7 +61,7 @@
     </div>
 
     <ul class="link-zalo">
-      <?php foreach ($hotline as $key => $value) { ?>
+      <?php foreach ($zalo as $key => $value) { ?>
       <li>
         <figure><img src="images/linkzalo.jpg" alt="zalo"></figure>
         <span>KH ZALO: <a href="//zalo.me/<?=preg_replace('/[^0-9]/','',$value['link']);?>"><?= $value['link'] ?></a></span>
