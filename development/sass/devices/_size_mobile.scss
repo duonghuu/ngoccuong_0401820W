@@ -1,0 +1,50 @@
+@media screen 
+	and (max-width: $device_size_mobile) {
+        @include setHeaderCenter;
+        @include setSliderSmall;
+        @include setDoitacSmall;
+        @include setSanPhamTieuBieuSmall;
+
+        // @include setLeftRightMobile;
+        // @include setCartMobile;
+        @include showMobileMenu;
+        @include setProductColumnMobile(6, 5%);
+        // @include setTaiSaoFull;
+        @include setProductMobile;
+        @include setFooterSmall;
+        @include setCopyrightCenter;
+        // @include setProductDanhmuc;
+        .intro-hotline,.intro-info p,.intro-mxh, .banner p, .idx-tit p{
+            display: none;
+        }
+        #footer .ft-flex .ft-baiviet{
+            width: 100%;
+        }
+        .intro-product-item{
+            @include grid-col($col: 12, $grid-columns: 12);
+            a{
+                max-width: 240px;
+            }
+        }
+        .intro-head .intro-head-flex{
+            @include flex-wrap(wrap);
+            .intro-logo{
+                width: 100%;
+                display: block;
+                text-align: center;
+                img{
+                    max-width: 100px !important;
+                }
+            }
+        }
+    // #footer {
+    //     .copyright{
+    //         padding-bottom: 50px;
+    //     }
+    //   .ft-flex {
+    //     .ft-fanpage,.ft-baiviet  {
+    //       width: 100%;
+    //     }
+    //   }
+    // }
+}

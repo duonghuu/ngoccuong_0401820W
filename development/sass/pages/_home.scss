@@ -1,0 +1,62 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+%idx-tit {} 
+%idx-tit-line {
+    content: "";
+    background: url($images-url + "idx-l.png");
+    @include box(134px, 7px);
+    @include relative($bottom: -5px);
+}
+.idx-tit {
+    background-color: $bg-menu;
+    @include boxstyle($display: flex, $align-items: center, $flex-wrap: wrap);
+    @include bg("idx-tit.png", $background-repeat: repeat-x);
+    border: 1px solid #f1f1f1;
+    margin-bottom: 7px;
+    position: relative;
+    &:before{
+        content: "";
+        @include absolute(0, 0, 0, 0);
+        border: 1px solid #fff;
+    }
+    h4 {
+        @include setFont(20px, #fff, 700);
+        @include boxstyle($display: inline-flex, $align-items: center);
+        min-height: 45px;
+        padding: 0 25px;
+        text-transform: uppercase;
+        background-color: #0d62d2;
+        margin: 0;
+        position: relative;
+        -webkit-border-top-right-radius: 30px;
+        -webkit-border-bottom-right-radius: 30px;
+        -moz-border-radius-topright: 30px;
+        -moz-border-radius-bottomright: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        img{
+        }
+        span, a {
+            color: #fff;
+        }
+
+        &::before {
+        }
+
+        &::after {
+        }
+    }
+    p{
+        @include setFont(20px, #4c4c4c, 400, "Arial");
+        margin: 0 0 0 23px;
+        a{
+            font-weight: 700;
+            color: #0d62d2;
+        }
+    }
+}
+
+.idx-desc {
+    @include setFont(15px, #808080, 400, $font-text);
+}
