@@ -3,6 +3,7 @@
 @define ('_xindungspamwebsitechungtoi','Xin đừng spam website chúng tôi!');
 @define ('_visaochochungtoi','Vì sao nên chọn dịch vụ Mỹ Như');
 @define ('_daily','Đại lý');
+@define ('_timkiem','Tìm kiếm');
 @define ('_congtytuvanbds','Công ty tư vấn bất động sản');
 @define ('_tourkhuyenmai','<strong>Tour </strong> khuyến mãi');
 @define ('_tinvavideo','<strong>Tin tức &amp; video </strong> jaya travel');

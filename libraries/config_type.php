@@ -31,7 +31,7 @@ switch($type){
 		break;
 
 		case 'list':
-		$config['type'] = array('seo','ten','hinhanh','noibat');
+		$config['type'] = array('seo','ten');
 		$config['title'] = array('noibat'=>"Nổi bật");
 		@define ( _width_thumb , 400 );
 		@define ( _height_thumb , 560 );
@@ -48,7 +48,7 @@ switch($type){
 		break;
 
 		default:
-		$config['type'] = array('seo','ten','mota','gia','giakm','noibat','danhmuc','list','hinhanh','hinhthem','noidung');
+		$config['type'] = array('seo','ten','mota','gia','giakm','noibat','danhmuc','list','hinhanh','hinhthem','noidung','spmoi');
 		$config['ck'] = array('mota2');
 		$config['title'] = array('tieubieu'=>"Sản phẩm chính",'noibat'=>"Nổi bật",
 			'spmoi'=>"Mới",'spbanchay'=>"Bán chạy","mota"=>"Mô tả","toado"=>"Iframe google map",
@@ -237,6 +237,8 @@ switch($type){
 	case 'tuyen-dung':
 	case 'tu-van':
 	case 'chinh-sach':
+	case 'huong-dan':
+	case 'gia-si':
 	switch($act){
 		case 'danhmuc':
 		$config['type'] = array('seo','ten');

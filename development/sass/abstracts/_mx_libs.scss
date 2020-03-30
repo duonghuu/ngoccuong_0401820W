@@ -701,3 +701,59 @@ $XL:   1200px;
    @media only screen and (min-width: $XL) { @content; } 
   }
 }
+// This function will return the last item in a list
+@function last ($list) {
+  @return nth($list, length($list));
+}
+
+// This function implements the improved double ampersand algoithm
+@mixin doubly {
+  // at first we need to reference the list of selectors for which
+  // this mixin is called (we will call that "caller selectors" from now on)
+  //
+  // For
+  // p .test, a { @include doubly { /* ... */ }; }
+  // this will be
+  // (p .test, a)
+  $caller-selectors: &;
+
+  // We need to track whether the last selector for all caller selectors
+  // is the same. If it isn't we need to perform some special handling
+  $has-same-last-caller-selector: true;
+
+  // For checking whether all last selectors are the same. Store the first one
+  // and compare all other last selectors to it.
+  $previous-last-selector: last(nth($caller-selectors, 1));
+
+  // A list of prepared separators. If the last selectors are not the same,
+  // we need to create our own block with the prepared selectors.
+  $prepared-selectors: ();
+
+  // Loop through all caller selectors to
+  // - check for the last
+  // - generate prepared selectors
+  @each $selector in $caller-selectors {
+    $last: last($selector);
+    @if ($previous-last-selector != $last) {
+      $has-same-last-caller-selector: false;
+    }
+
+    // generate prepared selector
+    $prepared-selectors: append($prepared-selectors, #{$selector} + #{$last}, comma);
+  }
+
+
+  @if ($has-same-last-caller-selector) {
+    // if all selectors have the same last selector
+    // we can just use the regular `&` functionality
+    & + #{$previous-last-selector} {
+      @content;
+    } 
+  } @else {
+    // If not all selectors are the same, we need to render a completely
+    // own block
+    @at-root #{$prepared-selectors} {
+      @content;
+    }
+  }
+}

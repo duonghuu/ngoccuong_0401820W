@@ -29,7 +29,7 @@
           </div>
           <?php include _template."layout/menu_top.php"; ?>
         </div>
-        <span class="text-uppercase" onclick="openNav()">Menu<i class="fas fa-bars"></i></span>
+        <span class="text-uppercase" id="humber_valak">Menu<i class="fas fa-bars"></i></span>
       </div>
     </div>
   </div>

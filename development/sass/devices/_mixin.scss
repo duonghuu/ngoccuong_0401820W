@@ -48,19 +48,21 @@
 }
 /*========= COMMON ===============*/
 @mixin setIdxTitleSize(){
-  .idx-tit{
-    h4{
-      @include font-size(24, 16);
-
-      &:before, &:after{
-        display: none;
+  .idx-tit {
+      margin-bottom: 20px;
+      h4 {
+          @include font-size(20, 16);
+          span, a {
+              &::after {
+                  display: none;
+              }
+          }
       }
-    }
   }
-  .tin-video-bg .tin-video-wrap .title{
-    @include font-size(24, 16);
+  .pr-box article .info p del{
+    margin-left: 0;
   }
-  }
+}
 /*========= SLIDER ===============*/
 @mixin setSliderSmall(){
   .box-menu-slider{
@@ -69,19 +71,7 @@
 }
 /*========= HEADER ===============*/
 @mixin setHeaderCenter(){
-  .hd-bg {
-      .hd-flex{
-        @include justify-content(flex-start);
-      }
-  }
-  .banner{
-      width: auto;
-      @include flex(1);
-      p{
-        font-size: em(15);
-      }
-  }
-  .hd-right{
+  .hd-top, .nav-bg{
       display: none;
   }
 }
@@ -105,30 +95,31 @@
   }
 }
 /*========= HOME ===============*/
-@mixin setSanPhamTieuBieuSmall(){
-  .sptieubieu-flex .img-danhmuc{
-    display: none;
-  }
-  $gutter-width: percentage(26/738);
-  .sptieubieu-flex .product-grid {
-    @include grid($gutter: $gutter-width);
-    .pr-box{
-      @include grid-col($col: 4, $gutter: $gutter-width);
+@mixin setLinkChinhSachSmall(){
+  .link-chinhsach-flex {
+    .link-chinhsach{
+      @include flex(1);
+      padding: 11.5px 0.5em;
+      @include doubly(){
+        margin-left: 1em;
+      };
     }
   }
 }
-@mixin setProductDanhmuc($p_prodmCol: 3){
-  .spnoibat-flex {
-    .feature-img{
-      display: none;
+@mixin setProductDanhmucMobile(){
+  .product-danhmuc{
+      display: block;
+    h2{
     }
   }
-  .idx-tit h4::after{
-    display: none;
-  }
-  .idx-tit h4{
-    padding: 0 10px;
-  }
+}
+@mixin setVeChungToiMobile(){
+  .vechungtoi-grid{
+    $vechungtoi-gutter: percentage(30/1190);
+    .vechungtoi-item{
+      @include grid-col($col: 6, $grid-columns: 12, $gutter: $vechungtoi-gutter);
+    }
+  }  
 }
 @mixin setTaiSaoFull(){
   .taisao-bg {
@@ -185,7 +176,7 @@
         margin-bottom: 1em;
       }
       .ft-fanpage,.ft-baiviet  {
-        width: 48%;
+        width: 100%;
         margin-bottom: 1em;
       }
     }
@@ -193,19 +184,6 @@
 }
 @mixin setCopyrightCenter(){
   .copyright {
-    padding-bottom: 50px;
-      .ft-wrap {
-        @include flex-wrap(wrap);
-        text-align: center;
-          .text {
-            width: 100%;
-          }
-
-          ul.ft-thongke {
-            width: 100%;
-            @include flex-wrap(wrap);
-            @include justify-content(center);
-          }
-      }
+    padding-bottom: 48px;
   }
 }

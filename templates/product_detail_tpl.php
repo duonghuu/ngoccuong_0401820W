@@ -125,3 +125,4 @@
   </div><!---END .wap_item-->
   <div class="pagination"><?=pagesListLimitadmin($url_link , $totalRows , $pageSize, $offset)?></div>
 <?php } ?>
+

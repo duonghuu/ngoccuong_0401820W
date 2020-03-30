@@ -68,19 +68,19 @@ switch($com)
 	$template = isset($_GET['id']) ? "news_detail" : "news";
 	$type_og = isset($_GET['id']) ? "article" : "object";
 	break;
-	case 'tuyen-dung':
-	$type = "tuyen-dung";
-	$title = _tuyendung;
-	$title_cat = _tuyendung;
+	case 'huong-dan':
+	$type = "huong-dan";
+	$title = "Hướng dẫn";
+	$title_cat = "Hướng dẫn";
 	$title_other = _tinlienquan;
 	$source = "news";
 	$template = isset($_GET['id']) ? "news_detail" : "news";
 	$type_og = isset($_GET['id']) ? "article" : "object";
 	break;
-	case 'tu-van':
-	$type = "tu-van";
-	$title = "Tư vấn";
-	$title_cat = "Tư vấn";
+	case 'gia-si':
+	$type = "gia-si";
+	$title = "Giá sỉ";
+	$title_cat = "Giá sỉ";
 	$title_other = _tinlienquan;
 	$source = "news";
 	$template = isset($_GET['id']) ? "news_detail" : "news";
@@ -159,6 +159,15 @@ switch($com)
 	$template = "product";
 	break;
 	case 'san-pham':
+	$type = "san-pham";
+	$title = _sanpham;
+	$title_cat = _sanpham;
+	$title_other = _sanphamkhac;
+	$source = "product";
+	$template = isset($_GET['id']) ? "product_detail" : "product";
+	$type_og = isset($_GET['id']) ? "article" : "object";
+	break;
+	case 'hang-moi':
 	$type = "san-pham";
 	$title = _sanpham;
 	$title_cat = _sanpham;

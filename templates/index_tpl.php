@@ -1,7 +1,15 @@
+<div class="page-title page-title-default title-size-small title-design-centered color-scheme-light" style="">
+  <div class="container">
+    <div class="text-center entry-header">
+      <h1 class="entry-title"><?= $company["ten"] ?></h1> 
+    </div>
+    </div>
+  </div>
 <div class="container">
   <div class="first-article">
     <?= $firstarticle["noidung"] ?>
   </div>
+
   <div class="product-danhmuc">
     <?php foreach ($product_danhmuc as $key => $value) { 
       $link = "san-pham/".$value["tenkhongdau"]."-".$value["id"];
@@ -9,14 +17,15 @@
       <h2><a href="<?= $link ?>"><?= $value["ten"] ?></a></h2>
     <?php } ?>
   </div>
-  <p class="diachi-cuahang">
+  <div class="diachi-cuahang">
     <figure><img src="images/diachi.png" alt="diachi"></figure><strong><?= _diachi ?>:</strong><?= $company["diachi"] ?>
-  </p>
-  <p class="diachi-cuahang">
+  </div>
+  <div class="diachi-cuahang">
     <figure><img src="images/giomo.png" alt="giomo"></figure><strong>Giờ làm việc:</strong><?= $thuoctinh["giomo"] ?>
-  </p>
+  </div>
 
   <div class="vechungtoi-bg">
+
     <div class="idx-tit text-center text-uppercase"><h4><span>Về chúng tôi</span></h4></div>
     <div class="vechungtoi-grid">
       <?php foreach ($thuvien as $key => $value) {
@@ -24,7 +33,7 @@
         $img = _upload_hinhthem_l.$value["thumb"]; 
         ?>
         <div class="vechungtoi-item"><a data-fancybox="gallery27" href="<?= $img_large ?>">
-            <figure><img src="<?= $img ?>" alt="Về chúng tôi"></figure>
+            <figure class="zoom_hinh"><img src="<?= $img ?>" alt="Về chúng tôi"></figure>
           </a></div>
       <?php } ?>
     </div>
@@ -45,6 +54,7 @@
     <div class="content">
       <?= $thongtinchinhsach["noidung"] ?>
     </div>
+    
     <div class="link-chinhsach-flex">
       <div class="link-chinhsach bg-xanh"><img src="images/chinhsach-right.png" alt="link"><a href="chinh-sach-bo-si.html">
         Xem chính sách bỏ sỉ quần áo
@@ -54,6 +64,7 @@
       </a></div>
     </div>
     <div class="btn-dangkymuasi">
+
       <a rel="nofollow" href="">
         <h6>ĐĂNG KÝ MUA SỈ</h6>
         <p>tư vấn mua sỉ - không thích không mua</p>

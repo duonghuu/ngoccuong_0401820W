@@ -27,7 +27,7 @@
                 </ul>
             </div>
             <style>
-                .toolbar {    background-color: $bg-menu; display: none; width: 100%; bottom: 0; position: fixed; z-index: 500; height: auto; border-top: 1px solid #cbcbcb;}
+                .toolbar {    background-color: #333; display: none; width: 100%; bottom: 0; position: fixed; z-index: 500; height: auto; border-top: 1px solid #cbcbcb;}
                 .toolbar ul{list-style-type: none;display: flex; margin: 0; align-items: center;}
                 .toolbar ul li { text-align: center; width: 25%;}
                 .toolbar ul li a { display: inline-block; width: 100%; color: #fff;}

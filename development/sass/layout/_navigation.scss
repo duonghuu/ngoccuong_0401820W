@@ -32,7 +32,7 @@
     @include animation('dropInDown 0.3s both');
 }
 .nav-bg {
-    @include flex(1);
+    
     @include relative($left: 0, $right: 0);
 
     z-index: 451 !important;
@@ -43,8 +43,8 @@
     
 }
 .main-nav {
-    @include boxstyle($display: flex, $justify-content: space-between,$align-items: center);
-    margin-left: percentage(270/1200);
+    @include boxstyle($display: flex, $justify-content: center,$align-items: center);
+    
     position: relative;
    
     ul{
@@ -53,13 +53,23 @@
     }
     &>ul {
         @include boxstyle($display: flex, $align-items: center,$justify-content: space-between);
-        @include flex(1);
+        
         z-index: 5;
         
         &>li {
-            @include flex(auto);
+            @include boxstyle($display: flex, $align-items: center);
             position: relative;
             z-index: 5;
+            @include flex(auto);
+            &:not(:last-child):after{
+                content: "";
+                @include box(1px, 11px);
+                background-color: #dbdbdb;
+                @include absolute($right: -#{em(15)});
+            }
+            &+li{
+                margin-left: em(30);
+            }
             ul{
                 @extend %sub-menu-list;
             }
@@ -69,7 +79,7 @@
                 position: relative;
                 text-align: center;
                 text-transform: uppercase;
-                @include setFont(15px, #fff, 400, $font-menu);
+                @include setFont(15px, #212121, 600, $font-menu);
                 
             }
             
@@ -97,7 +107,7 @@
         li {
             position: relative;
             a {
-                @include setFont(14px, #707070, 400, $font-menu);
+                @include setFont(14px, #212121, 400, $font-menu);
                 text-decoration: none;
                 line-height: 34px;
                 padding: 0 10px;
@@ -112,7 +122,7 @@
                     @include absolute($top: 0, $right: 5px);
                 }
             }
-            @include setTagAHover(#707070, $bg-menu);
+            @include setTagAHover(#212121, $theme-color);
             &:hover{
                 &>ul{
                     display: block;

@@ -3,6 +3,7 @@
 @define ('_xindungspamwebsitechungtoi','Please do not spam our website!');
 @define ('_visaochochungtoi','Why choose My Nhu services');
 @define ('_daily','Agency');
+@define ('_timkiem','Search');
 @define ('_congtytuvanbds','Real estate consulting company');
 @define ('_tourkhuyenmai','<strong>Tour </strong> promotion');
 @define ('_tinvavideo','<strong>News &amp; video </strong> jaya travel');
