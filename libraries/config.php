@@ -30,11 +30,11 @@ if ($cautruyvan != $kiemtra){
 $link_id = true;
 
 $config['database']['servername'] = 'localhost';
-$config_tam = '/2003/ngoccuong_0401820W';
-$config['database']['database'] = 'ngoccuong040';
-$config['database']['username'] = 'root';
-$config['database']['password'] = '';
-define ( 'NN_MSHD' , '0401820W');
+$config_tam = '/2003/ngoccuong_0451620';
+$config['database']['database'] = 'demo24_ngocc040';
+$config['database']['username'] = 'demo24_ngocc040';
+$config['database']['password'] = '123qwE@';
+define ( 'NN_MSHD' , '0451620');
 define ( 'NN_AUTHOR' , 'huuduongnina@gmail.com'); 
 $config['author']['name'] = 'Lê Hữu Dương';
 $config['author']['email'] = 'huuduongnina@gmail.com';
